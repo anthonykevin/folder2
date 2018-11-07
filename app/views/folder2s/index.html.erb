@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Folder2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @folder2s.each do |folder2| %>
+      <tr>
+        <td><%= folder2.title %></td>
+        <td><%= folder2.content %></td>
+        <td><%= link_to 'Show', folder2 %></td>
+        <td><%= link_to 'Edit', edit_folder2_path(folder2) %></td>
+        <td><%= link_to 'Destroy', folder2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Folder2', new_folder2_path %>
